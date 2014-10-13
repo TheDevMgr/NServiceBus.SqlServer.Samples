@@ -77,9 +77,9 @@
         public class OrderData : ContainSagaData
         {
             [Unique]
-            public int OrderNumber { get; set; }
-            public string[] VideoIds { get; set; }
-            public string ClientId { get; set; }
+            public virtual int OrderNumber { get; set; }
+            public virtual string[] VideoIds { get; set; }
+            public virtual string ClientId { get; set; }
         }
 
         public class BuyersRemorseIsOver

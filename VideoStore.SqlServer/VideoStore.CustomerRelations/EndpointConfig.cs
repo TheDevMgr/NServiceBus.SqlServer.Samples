@@ -12,7 +12,7 @@ namespace VideoStore.CustomerRelations
             // To use SQLServer, install-package NServiceBus.NHibernate and then use configuration.UsePersistence<NHibernatePersistence>();
             if (Debugger.IsAttached)
             {
-                configuration.UsePersistence<InMemoryPersistence>();
+                configuration.UsePersistence<NHibernatePersistence>();
             }
             configuration.Conventions()
                 .DefiningCommandsAs(t => t.Namespace != null && t.Namespace.StartsWith("VideoStore") && t.Namespace.EndsWith("Commands"))
